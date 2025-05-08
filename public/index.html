@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilingual Music Recommender</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>🎵 CHATBOT FOR SONG RECOMMENDATION SYSTEM</h2>
+            <p>Share your mood and discover Tamil & English songs</p>
+        </div>
+        <div class="chat-box" id="chat-box">
+            <div class="message bot-message">
+                Hi there! Tell me how you're feeling and I'll recommend some great Tamil and English songs for you.
+            </div>
+            <div class="audio-player-container" id="audio-player-container" style="display: none;">
+                <div class="now-playing">
+                    <img id="now-playing-art" src="" alt="Album Art">
+                    <div class="track-info">
+                        <div id="now-playing-title">No song playing</div>
+                        <div id="now-playing-artist"></div>
+                    </div>
+                </div>
+                <audio id="global-audio-player" controls>
+                    Your browser doesn't support audio playback.
+                </audio>
+                <button id="close-player-btn" class="close-btn"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Try 'Feeling happy' or 'மகிழ்ச்சியாக உள்ளேன்'..." autocomplete="off">
+            <button id="send-btn">Send</button>
+        </div>
+        <div class="recommendations">
+            <h3><i class="fas fa-music"></i> Recommended Tracks</h3>
+            <div class="tracks-container" id="recommended-tracks">
+                <div class="no-preview">Your recommendations will appear here</div>
+            </div>
+        </div>
+    </div>
+   
+</body>
+</html>
